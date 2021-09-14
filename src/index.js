@@ -2,7 +2,8 @@
 'use strict';
 
 
-import closeModal from "./modules/closeModal";
+
+import smoothScrolling from "./modules/smoothScrolling";
 
 
-closeModal();
+smoothScrolling();
