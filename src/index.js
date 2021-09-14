@@ -1,6 +1,8 @@
 /* eslint-disable strict */
 'use strict';
 
-import openModal from "./modules/openModal";
 
-openModal();
+import closeModal from "./modules/closeModal";
+
+
+closeModal();

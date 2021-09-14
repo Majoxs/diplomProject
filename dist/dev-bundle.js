@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openModal */ \"./src/modules/openModal.js\");\n/* eslint-disable strict */\n\n\n\n(0,_modules_openModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openModal */ \"./src/modules/openModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* eslint-disable strict */\n\n\n\n\n(0,_modules_openModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/closeModal.js":
+/*!***********************************!*\
+  !*** ./src/modules/closeModal.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar closeModal = function closeModal() {\n  var closeModalBtn = document.querySelector('.modal-close > img'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n\n  var displayNone = function displayNone() {\n    modalOverlay.style.display = 'none';\n    modalCallback.style.display = 'none';\n  };\n\n  closeModalBtn.addEventListener('click', displayNone);\n  modalOverlay.addEventListener('click', displayNone);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (closeModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/closeModal.js?");
 
 /***/ }),
 
@@ -451,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a3e36a4b60b0a9f58808")
+/******/ 		__webpack_require__.h = () => ("cfe2572247ddf4f48374")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
