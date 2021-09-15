@@ -38,29 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_serviceModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/serviceModal */ \"./src/modules/serviceModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* eslint-disable strict */\n\n\n\n\n(0,_modules_serviceModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_smoothScrollUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/smoothScrollUp */ \"./src/modules/smoothScrollUp.js\");\n/* eslint-disable strict */\n\n\n\n(0,_modules_smoothScrollUp__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/modules/closeModal.js":
-/*!***********************************!*\
-  !*** ./src/modules/closeModal.js ***!
-  \***********************************/
+/***/ "./src/modules/smoothScrollUp.js":
+/*!***************************************!*\
+  !*** ./src/modules/smoothScrollUp.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar closeModal = function closeModal() {\n  var closeModalBtn = document.querySelector('.modal-close > img'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n\n  var displayNone = function displayNone() {\n    modalOverlay.style.display = 'none';\n    modalCallback.style.display = 'none';\n  };\n\n  closeModalBtn.addEventListener('click', displayNone);\n  modalOverlay.addEventListener('click', displayNone);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (closeModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/closeModal.js?");
-
-/***/ }),
-
-/***/ "./src/modules/serviceModal.js":
-/*!*************************************!*\
-  !*** ./src/modules/serviceModal.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar serviceModal = function serviceModal() {\n  var servicesBtn = document.querySelector('.button-services'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n  servicesBtn.addEventListener('click', function () {\n    modalOverlay.style.display = 'block';\n    modalCallback.style.display = 'block';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (serviceModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/serviceModal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar smoothScrollUp = function smoothScrollUp() {\n  var upBtn = document.querySelector('.up');\n  var mainWrapper = document.querySelector('.main-wrapper');\n  upBtn.style.display = 'none';\n  window.addEventListener('scroll', function () {\n    if (window.scrollY >= 600) {\n      upBtn.style.display = 'block';\n    } else {\n      upBtn.style.display = 'none';\n    }\n  });\n  upBtn.addEventListener('click', function () {\n    mainWrapper.scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScrollUp);\n\n//# sourceURL=webpack://diplomproject/./src/modules/smoothScrollUp.js?");
 
 /***/ }),
 
@@ -462,7 +451,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d63078690a71f62809cc")
+/******/ 		__webpack_require__.h = () => ("2a0f2a4769b43d5a4063")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

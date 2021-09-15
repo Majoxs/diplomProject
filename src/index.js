@@ -1,11 +1,7 @@
 /* eslint-disable strict */
 'use strict';
 
+import smoothScrollUp from "./modules/smoothScrollUp";
 
-
-import serviceModal from "./modules/serviceModal";
-import closeModal from "./modules/closeModal";
-
-serviceModal();
-closeModal();
+smoothScrollUp();
 
