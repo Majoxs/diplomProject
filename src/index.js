@@ -1,7 +1,8 @@
 /* eslint-disable strict */
 'use strict';
 
-import smoothScrollUp from "./modules/smoothScrollUp";
 
-smoothScrollUp();
+import accordeon from "./modules/accordeon";
+
+accordeon();
 
