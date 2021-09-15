@@ -2,7 +2,10 @@
 'use strict';
 
 
-import slider from "./modules/slider";
 
+import serviceModal from "./modules/serviceModal";
+import closeModal from "./modules/closeModal";
 
-slider();
+serviceModal();
+closeModal();
+

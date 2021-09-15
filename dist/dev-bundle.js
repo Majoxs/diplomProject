@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openModal */ \"./src/modules/openModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* harmony import */ var _modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/smoothScrolling */ \"./src/modules/smoothScrolling.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* eslint-disable strict */\n\n\n\n\n\n\n(0,_modules_openModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_serviceModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/serviceModal */ \"./src/modules/serviceModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* eslint-disable strict */\n\n\n\n\n(0,_modules_serviceModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
 
 /***/ }),
 
@@ -53,36 +53,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/modules/openModal.js":
-/*!**********************************!*\
-  !*** ./src/modules/openModal.js ***!
-  \**********************************/
+/***/ "./src/modules/serviceModal.js":
+/*!*************************************!*\
+  !*** ./src/modules/serviceModal.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar openModal = function openModal() {\n  var callbackBtn = document.querySelector('.callback-btn.hidden-xs'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n  callbackBtn.addEventListener('click', function () {\n    modalOverlay.style.display = 'block';\n    modalCallback.style.display = 'block';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (openModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/openModal.js?");
-
-/***/ }),
-
-/***/ "./src/modules/slider.js":
-/*!*******************************!*\
-  !*** ./src/modules/slider.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {\n  var slider = document.querySelector('.top-slider');\n  var slide = document.querySelectorAll('.item');\n  var description = document.querySelectorAll('.table');\n  var currentSlide = 0,\n      interval;\n\n  var prevSlide = function prevSlide(elem, elem2, index, strClass) {\n    elem[index].style.display = 'none';\n    elem2[index].classList.remove(strClass);\n  };\n\n  var nextSlide = function nextSlide(elem, elem2, index, strClass) {\n    elem[index].style.display = 'block';\n    elem2[index].classList.add(strClass);\n  };\n\n  var autoPlaySlide = function autoPlaySlide() {\n    prevSlide(slide, description, currentSlide, 'active');\n    currentSlide++;\n\n    if (currentSlide >= slide.length) {\n      currentSlide = 0;\n    }\n\n    nextSlide(slide, description, currentSlide, 'active');\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySlide, time);\n  };\n\n  var stopSlide = function stopSlide() {\n    clearInterval(interval);\n  };\n\n  slider.addEventListener('mouseover', function () {\n    stopSlide();\n  });\n  slider.addEventListener('mouseout', function () {\n    startSlide();\n  });\n  startSlide(3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://diplomproject/./src/modules/slider.js?");
-
-/***/ }),
-
-/***/ "./src/modules/smoothScrolling.js":
-/*!****************************************!*\
-  !*** ./src/modules/smoothScrolling.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== \"undefined\" && o[Symbol.iterator] || o[\"@@iterator\"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === \"number\") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it[\"return\"] != null) it[\"return\"](); } finally { if (didErr) throw err; } } }; }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar smoothScrolling = function smoothScrolling() {\n  var topMenuLinks = document.querySelectorAll('.top-menu a');\n\n  var _iterator = _createForOfIteratorHelper(topMenuLinks),\n      _step;\n\n  try {\n    var _loop = function _loop() {\n      var anchor = _step.value;\n      anchor.addEventListener('click', function (event) {\n        event.preventDefault();\n        var blockId = anchor.getAttribute('href').substr(1);\n        document.getElementById(blockId).scrollIntoView({\n          behavior: 'smooth',\n          block: 'start'\n        });\n      });\n    };\n\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      _loop();\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScrolling);\n\n//# sourceURL=webpack://diplomproject/./src/modules/smoothScrolling.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar serviceModal = function serviceModal() {\n  var servicesBtn = document.querySelector('.button-services'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n  servicesBtn.addEventListener('click', function () {\n    modalOverlay.style.display = 'block';\n    modalCallback.style.display = 'block';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (serviceModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/serviceModal.js?");
 
 /***/ }),
 
@@ -484,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("c172f33d88139df5d11b")
+/******/ 		__webpack_require__.h = () => ("d63078690a71f62809cc")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
