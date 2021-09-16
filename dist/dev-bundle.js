@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* eslint-disable strict */\n\n\n\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/carousel */ \"./src/modules/carousel.js\");\n/* eslint-disable strict */\n\n\n\n\n(0,_modules_carousel__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* eslint-disable no-trailing-spaces */\n\n/* eslint-disable indent */\nvar accordeon = function accordeon() {\n  var accordBlock = document.querySelector('.accordeon'),\n      accordItems = accordBlock.querySelectorAll('.element'),\n      accordContent = accordBlock.querySelectorAll('.element-content'),\n      accordTitle = accordBlock.querySelectorAll('.title');\n\n  var toggleAccordeonItems = function toggleAccordeonItems(index) {\n    for (var i = 0; i < accordItems.length; i++) {\n      if (index === i) {\n        accordItems[i].classList.add('active');\n      } else {\n        accordItems[i].classList.remove('active');\n      }\n    }\n\n    for (var _i = 0; _i < accordContent.length; _i++) {\n      if (index === _i) {\n        accordContent[_i].style.display = 'block';\n      } else {\n        accordContent[_i].style.display = 'none';\n      }\n    }\n  };\n\n  accordBlock.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.classList.contains('title')) {\n      accordTitle.forEach(function (item, i) {\n        if (item === target) {\n          toggleAccordeonItems(i);\n        }\n      });\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://diplomproject/./src/modules/accordeon.js?");
+
+/***/ }),
+
+/***/ "./src/modules/carousel.js":
+/*!*********************************!*\
+  !*** ./src/modules/carousel.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar carousel = function carousel() {\n  console.log('carousel');\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (carousel);\n\n//# sourceURL=webpack://diplomproject/./src/modules/carousel.js?");
 
 /***/ }),
 
@@ -451,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6b0c5f63752322f16d36")
+/******/ 		__webpack_require__.h = () => ("68f72f72fe93f2c13db0")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

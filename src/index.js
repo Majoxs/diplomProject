@@ -3,6 +3,9 @@
 
 
 import accordeon from "./modules/accordeon";
+import carousel from "./modules/carousel";
+
+carousel();
 
 accordeon();
 
