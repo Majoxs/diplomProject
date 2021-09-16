@@ -2,10 +2,13 @@
 'use strict';
 
 
-import accordeon from "./modules/accordeon";
-import carousel from "./modules/carousel";
+import openModal from "./modules/openModal";
+import closeModal from "./modules/closeModal";
+import sendForm from "./modules/sendForm";
 
-carousel();
+openModal();
+closeModal();
+sendForm();
 
-accordeon();
+
 
