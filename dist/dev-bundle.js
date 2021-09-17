@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openModal */ \"./src/modules/openModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* harmony import */ var _modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/smoothScrolling */ \"./src/modules/smoothScrolling.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* eslint-disable strict */\n\n\n\n\n\n\n(0,_modules_openModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_openModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/openModal */ \"./src/modules/openModal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n/* harmony import */ var _modules_serviceModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/serviceModal */ \"./src/modules/serviceModal.js\");\n/* harmony import */ var _modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/smoothScrolling */ \"./src/modules/smoothScrolling.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_smoothScrollUp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScrollUp */ \"./src/modules/smoothScrollUp.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_sendForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/sendForm */ \"./src/modules/sendForm.js\");\n/* eslint-disable strict */\n\n\n\n\n\n\n\n\n\n\n(0,_modules_openModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_serviceModal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_smoothScrolling__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_smoothScrollUp__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n(0,_modules_sendForm__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n\n//# sourceURL=webpack://diplomproject/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/accordeon.js":
+/*!**********************************!*\
+  !*** ./src/modules/accordeon.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var accordBlock = document.querySelector('.accordeon'),\n      accordItems = accordBlock.querySelectorAll('.element'),\n      accordContent = accordBlock.querySelectorAll('.element-content'),\n      accordTitle = accordBlock.querySelectorAll('.title');\n\n  var toggleAccordeonItems = function toggleAccordeonItems(index) {\n    for (var i = 0; i < accordItems.length; i++) {\n      if (index === i) {\n        accordItems[i].classList.add('active');\n      } else {\n        accordItems[i].classList.remove('active');\n      }\n    }\n\n    for (var _i = 0; _i < accordContent.length; _i++) {\n      if (index === _i) {\n        accordContent[_i].style.display = 'block';\n      } else {\n        accordContent[_i].style.display = 'none';\n      }\n    }\n  };\n\n  accordBlock.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.classList.contains('title')) {\n      accordTitle.forEach(function (item, i) {\n        if (item === target) {\n          toggleAccordeonItems(i);\n        }\n      });\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://diplomproject/./src/modules/accordeon.js?");
 
 /***/ }),
 
@@ -64,6 +75,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/sendForm.js":
+/*!*********************************!*\
+  !*** ./src/modules/sendForm.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar sendForm = function sendForm() {\n  var phone = document.getElementById('tel'),\n      name = document.getElementById('fio'),\n      form = document.getElementById('form-callback');\n\n  var validForPhone = function validForPhone() {\n    this.value = this.value.replace(/[^\\+\\d]/g, '');\n  };\n\n  var validForName = function validForName() {\n    this.value = this.value.replace(/[^а-яё\\s]/gi, '');\n  };\n\n  phone.addEventListener('input', validForPhone);\n  name.addEventListener('input', validForName);\n  var errorMessage = 'Что-то пошло не так...',\n      loadMessage = 'Загрузка...',\n      successMessage = 'Спасибо! Мы скоро с вами свяжемся!',\n      statusMessage = document.createElement('div');\n  statusMessage.style.cssText = 'font-size: 2rem; margin: 1rem 0;';\n\n  var clearInput = function clearInput() {\n    phone.value = '';\n    name.value = '';\n    setTimeout(function () {\n      statusMessage.style.display = 'none';\n    }, 4000);\n  };\n\n  form.addEventListener('submit', function (event) {\n    event.preventDefault();\n    form.appendChild(statusMessage);\n    var formData = new FormData(form);\n    var body = {};\n    formData.forEach(function (val, key) {\n      body[key] = val;\n    });\n    statusMessage.textContent = loadMessage;\n    postData(formData).then(function (response) {\n      if (response.status !== 200) {\n        throw new Error('status network not 200');\n      }\n\n      statusMessage.textContent = successMessage;\n    })[\"catch\"](function (error) {\n      statusMessage.textContent = errorMessage;\n      console.error(error);\n    })[\"finally\"](clearInput);\n  });\n\n  var postData = function postData(formData) {\n    return fetch('./server.php', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify(_toConsumableArray(formData))\n    });\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendForm);\n\n//# sourceURL=webpack://diplomproject/./src/modules/sendForm.js?");
+
+/***/ }),
+
+/***/ "./src/modules/serviceModal.js":
+/*!*************************************!*\
+  !*** ./src/modules/serviceModal.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar serviceModal = function serviceModal() {\n  var servicesBtn = document.querySelector('.button-services'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      modalCallback = document.querySelector('.modal-callback');\n  servicesBtn.addEventListener('click', function () {\n    modalOverlay.style.display = 'block';\n    modalCallback.style.display = 'block';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (serviceModal);\n\n//# sourceURL=webpack://diplomproject/./src/modules/serviceModal.js?");
+
+/***/ }),
+
 /***/ "./src/modules/slider.js":
 /*!*******************************!*\
   !*** ./src/modules/slider.js ***!
@@ -72,6 +105,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {\n  var slider = document.querySelector('.top-slider');\n  var slide = document.querySelectorAll('.item');\n  var description = document.querySelectorAll('.table');\n  var currentSlide = 0,\n      interval;\n\n  var prevSlide = function prevSlide(elem, elem2, index, strClass) {\n    elem[index].style.display = 'none';\n    elem2[index].classList.remove(strClass);\n  };\n\n  var nextSlide = function nextSlide(elem, elem2, index, strClass) {\n    elem[index].style.display = 'block';\n    elem2[index].classList.add(strClass);\n  };\n\n  var autoPlaySlide = function autoPlaySlide() {\n    prevSlide(slide, description, currentSlide, 'active');\n    currentSlide++;\n\n    if (currentSlide >= slide.length) {\n      currentSlide = 0;\n    }\n\n    nextSlide(slide, description, currentSlide, 'active');\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySlide, time);\n  };\n\n  var stopSlide = function stopSlide() {\n    clearInterval(interval);\n  };\n\n  slider.addEventListener('mouseover', function () {\n    stopSlide();\n  });\n  slider.addEventListener('mouseout', function () {\n    startSlide();\n  });\n  startSlide(3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://diplomproject/./src/modules/slider.js?");
+
+/***/ }),
+
+/***/ "./src/modules/smoothScrollUp.js":
+/*!***************************************!*\
+  !*** ./src/modules/smoothScrollUp.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar smoothScrollUp = function smoothScrollUp() {\n  var upBtn = document.querySelector('.up');\n  var mainWrapper = document.querySelector('.main-wrapper');\n  upBtn.style.display = 'none';\n  window.addEventListener('scroll', function () {\n    if (window.scrollY >= 600) {\n      upBtn.style.display = 'block';\n    } else {\n      upBtn.style.display = 'none';\n    }\n  });\n  upBtn.addEventListener('click', function () {\n    mainWrapper.scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScrollUp);\n\n//# sourceURL=webpack://diplomproject/./src/modules/smoothScrollUp.js?");
 
 /***/ }),
 
@@ -484,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("c172f33d88139df5d11b")
+/******/ 		__webpack_require__.h = () => ("a8bf31f92d6f2c263c7a")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
