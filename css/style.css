@@ -1171,6 +1171,14 @@ video#video_background {
 	margin-bottom: 10px;
 	height: 40px;
 }
+.services-elements {
+    overflow: hidden;
+}
+.services-carousel {
+    display: flex;
+    transition: .2s;
+}
+
 .services-elements .title-h5:after {
 	content: "";
 	display: block;
