@@ -453,6 +453,9 @@ a.absolute {
 .mobile-menu > ul > li.active > a {
 	color: #2fab6d;
 }
+.mobile-menu > ul > li > a:hover {
+	color: #2fab6d;
+}
 .mobile-menu-close.close {
 	top: 25px;
 	right: 25px;
@@ -1170,6 +1173,13 @@ video#video_background {
 	line-height: 1.2;
 	margin-bottom: 10px;
 	height: 40px;
+}
+.services-elements {
+    overflow: hidden;
+}
+.services-carousel {
+    display: flex;
+    transition: .2s;
 }
 .services-elements .title-h5:after {
 	content: "";

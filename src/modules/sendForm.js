@@ -13,7 +13,13 @@ const sendForm = () => {
 	};
 
 	phone.addEventListener('input', validForPhone);
+	phone.addEventListener('change', () => {
+		phone.value = phone.value.match(/\+?[78]([-()]*\d){6,10}/g);
+	});
 	name.addEventListener('input', validForName);
+	name.addEventListener('blur', () => {
+		name.value = name.value.match(/[а-яё]{2,}/gi, '');
+	});
 
 	const errorMessage = 'Что-то пошло не так...',
 		loadMessage = 'Загрузка...',
@@ -48,6 +54,8 @@ const sendForm = () => {
 					throw new Error('status network not 200');
 				}
 				statusMessage.textContent = successMessage;
+				document.querySelector('.modal-overlay').style.display = 'none';
+				document.querySelector('.modal-callback').style.display = 'none';
 			})
 			.catch(error => {
 				statusMessage.textContent = errorMessage;

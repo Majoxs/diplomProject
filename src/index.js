@@ -8,6 +8,8 @@ import slider from "./modules/slider";
 import smoothScrollUp from "./modules/smoothScrollUp";
 import accordeon from "./modules/accordeon";
 import sendForm from "./modules/sendForm";
+import carousel from "./modules/carousel";
+import mobileMenu from "./modules/mobileMenu";
 
 openModal();
 closeModal();
@@ -17,3 +19,5 @@ slider();
 smoothScrollUp();
 accordeon();
 sendForm();
+carousel();
+mobileMenu();
